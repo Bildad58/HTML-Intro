@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML Form Example</title>
+</head>
+<body>
+  <h1>HTML Form Example</h1>
+  <form>
+    <!-- Text Input -->
+    <label for="name"><strong>Name:</strong></label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+    <br/><br/>
+
+    <!-- Radio Buttons -->
+    <label><b>Gender:</b></label>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label>
+    <br/><br/>
+
+    <!-- Checkboxes -->
+    <label><strong>Hobbies:</strong></label>
+    <input type="checkbox" id="reading" name="hobbies" value="reading">
+    <label for="reading">Reading</label>
+    <input type="checkbox" id="traveling" name="hobbies" value="traveling">
+    <label for="traveling">Traveling</label>
+    <input type="checkbox" id="sports" name="hobbies" value="sports">
+    <label for="sports">Sports</label>
+    <br/><br/>
+
+    <!-- Submit Button -->
+    <button   type="submit">Submit</button>
+  </form>
+
+  <br/><br/>
+  <form action="" method="post">
+    <!-- Form controls -->
+    <label for="first_name">First Name:</label>
+    <input type="text" id="first_name" name="first_name" required />
+    <br><br>
+
+    <label for="last_name">Last Name:</label>
+    <input type="text" id="last_name" name="last_name" required />
+    <br><br>
+
+    <input type="submit" value="Submit">
+</form>
+<br>
+
+<form>
+  <fieldset>
+    <legend>Contact Preferences</legend>
+    <label>
+      <input type="radio" name="contact" value="email"> Email
+    </label>
+    <label>
+      <input type="radio" name="contact" value="phone"> Phone
+    </label>
+  </fieldset>
+</form>
+<br>
+<label for="browser">Choose a browser:</label>
+<input list="browsers" id="browser" name="browser">
+<datalist id="browsers">
+  <option value="Chrome">
+  <option value="Firefox">
+  <option value="Edge">
+  <option value="Safari">
+  <option value="Opera">
+</datalist>
+<form oninput="bmi.value = (weight.value / ((height.value/100) ** 2)).toFixed(2)">
+  <label for="weight">Weight (kg):</label>
+  <input type="number" id="weight" name="weight" value="70">
+
+  <label for="height">Height (cm):</label>
+  <input type="number" id="height" name="height" value="170">
+
+  <p>Your BMI: <output name="bmi"></output></p>
+</form>
+
+<form oninput="result.value = num1.value * num2.value">
+  <label for="num1">Enter first number:</label>
+  <input type="number" id="num1" name="num1" value="1">
+
+  <label for="num2">Enter second number:</label>
+  <input type="number" id="num2" name="num2" value="1">
+
+  <p>Product: <output name="result" for="num1 num2"></output></p>
+</form>
+<label for="cars">Choose a car:</label>
+<select id="cars" name="cars">
+  <option value="toyota">Toyota</option>
+  <option value="ford">Ford</option>
+  <option value="bmw">BMW</option>
+  <option value="audi">Audi</option>
+</select>
+<br>
+<select name="foods">
+  <optgroup label="Fruits">
+    <option value="apple">Apple</option>
+    <option value="banana">Banana</option>
+  </optgroup>
+  <optgroup label="Vegetables">
+    <option value="carrot">Carrot</option>
+    <option value="spinach">Spinach</option>
+  </optgroup>
+</select>
+<br>
+<label for="message">Your Message:</label>
+<textarea id="message" name="message" rows="4" cols="30" maxlength="4" wrap="hard">
+</textarea>
+
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Forms</title>
+    
+  </head>
+  <body>
+    <h1>HTML Forms without Labels</h1>
+    <p>Different form inputs without the use of Labels</p>
+
+    <form action="/intro.html" target="_blank">
+      <!-- Input field for first name -->
+      <!-- Attributes: type (text), name, size (20 characters wide), maxlength (10 chars limit), required (must be filled), autofocus (cursor starts here) -->
+      First name:
+      <input
+        type="text"
+        name="first_name"
+        size="20"
+        maxlength="10"
+        required
+        autofocus
+      />
+      <br /><br />
+
+      <!-- Input field for last name -->
+      <!-- Attributes: type (text), name, value (default text), autofocus (cursor starts here) -->
+      Last name:
+      <input type="text" name="last_name" value="last name...." autofocus />
+      <br /><br />
+
+      <!-- Input field for email -->
+      <!-- Attributes: type (email - requires valid email format), name, placeholder (displays hint text) -->
+      Email:
+      <input type="email" name="email" placeholder="example@gmail.com...." />
+      <br /><br />
+
+      <!-- Input field for password -->
+      <!-- Attributes: type (password - hides input), name -->
+      Password:
+      <input type="password" name="password" />
+      <br /><br />
+
+      <!-- Readonly input field for author -->
+      <!-- Attributes: type (text), name, value (default value), readonly (cannot be changed) -->
+      Author:
+      <input type="text" name="author" value="Bildad khaoya" readonly />
+      <br /><br />
+
+      <!-- Disabled input field -->
+      <!-- Attributes: type (text), name, value (default value), disabled (user cannot edit) -->
+      Disabled:
+      <input
+        type="text"
+        name="disabled"
+        value=" text is disabled"
+        disabled
+      />
+      <br /><br />
+
+      <!-- Number input field for working hours -->
+      <!-- Attributes: type (number - allows only numeric input), name, min (minimum 4), max (maximum 8) -->
+      Working hours:
+      <input type="number" name="working_hours" min="4" max="8" />
+      <br /><br />
+
+      <!-- File upload input -->
+      <!-- Attributes: type (file), name, accept (only image files), multiple (allows multiple files) -->
+      <input type="file" name="fileupload" accept="image/*" multiple />
+      <br><br>
+
+      <!-- Datalist input for location -->
+      <!-- Attributes: list (links input to datalist), name -->
+      Location:
+      <input list="locations" name="cities" />
+      
+      <!-- Datalist element for predefined location options -->
+      <datalist id="locations">
+        <!-- Option values users can select -->
+        <option value="Nairobi">
+        <option value="Kisumu">
+        <option value="Nakuru">
+        <option value="Mombasa">
+      </datalist><br>
+
+      <h3>Hobbies</h3>
+      <input type="checkbox" id="sport" name="football" value="football">
+      <label for="sport">Football</label>
+      <input type="checkbox" id="books" name="read" value="reading">
+      <label for="books">Reading</label>
+      <input type="checkbox" id="swim" name="swim" value="swimming">
+      <label for="swim">Swimming</label><br>
+
+      <h3>Gender</h3>
+      <input type="radio" id="male" name="gender" value="Male"/>
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="Female"/>
+      <label for="female">Female</label><br>
+      <br>
+      <input type="submit" value="Submit"/>
+    </form>
